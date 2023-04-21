@@ -88,4 +88,8 @@ public abstract class Panel extends AbstractComponent {
     public void toggle() {
         PrimeSelenium.executeScript(isToggleAjaxified(), getWidgetByIdScript() + ".toggle();");
     }
+
+    public boolean isCollapsed() {
+        return getWidgetConfiguration().optBoolean("collapsed");
+    }
 }

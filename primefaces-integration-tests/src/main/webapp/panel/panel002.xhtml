@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
+    <h:head>
+
+    </h:head>
+
+    <h:body>
+        <h:form id="form">
+            <p:commandButton id="updateForm" value="Update Form" process="@this" update="@form"/>
+
+            <p:panel id="panel1" header="Panel 1" multiViewState="true" toggleable="true"/>
+            <p:panel id="panel2" header="Panel 2" multiViewState="true" toggleable="true"/>
+
+            <ui:repeat id="repeat" value="#{panel002.headings}" var="heading">
+                <p:panel id="panel" header="#{heading}" multiViewState="true" toggleable="true"/>
+            </ui:repeat>
+        </h:form>
+    </h:body>
+</f:view>
+
+</html>
